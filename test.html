@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <title>AMP Test</title>
     <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
@@ -149,32 +150,117 @@
           }
       }
     </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <div class="header">
       <h1>Test AMP Page</h1>
       <a href="#" class="btn_close" onclick="clicked_close_button()">x</a>
     </div>
-    <div class="banner">
-      <a href="#">
-        <amp-img src="img/mgtest_b5.jpg"
-          srcset="img/mgtest_b5.jpg 1024w,
-            img/mgtest_b5_640w.jpg 800w"
+
+      <amp-carousel id="hero-images"
           width="1024"
           height="500"
           layout="responsive"
-          alt="an image"></amp-img>
-        <amp-img class="banner_icon" src="img/icon1.jpg"
-          srcset="img/icon1.jpg 192w,
-            img/icon1_120w.jpg 120w"
-          width="120"
-          height="120"
-          layout="responsive"
-          alt="an icon"></amp-img>
-        <div class="btn_download">Download</div>
-      </a>
-    </div>
+          type="slides"
+          autoplay>
+        <div class="banner">
+          <a href="#">
+            <amp-img src="img/mgtest_b1.jpg"
+              srcset="img/mgtest_b1.jpg 1024w,
+                img/mgtest_b1_640w.jpg 800w"
+              width="1024"
+              height="500"
+              layout="responsive"
+              alt="an image"></amp-img>
+            <amp-img class="banner_icon" src="img/icon1.jpg"
+              srcset="img/icon1.jpg 192w,
+                img/icon1_120w.jpg 120w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="an icon"></amp-img>
+            <div class="btn_download">Download</div>
+          </a>
+        </div>
+        <div class="banner">
+          <a href="#">
+            <amp-img src="img/mgtest_b2.jpg"
+              srcset="img/mgtest_b2.jpg 1024w,
+                img/mgtest_b2_640w.jpg 800w"
+              width="1024"
+              height="500"
+              layout="responsive"
+              alt="an image"></amp-img>
+            <amp-img class="banner_icon" src="img/icon2.jpg"
+              srcset="img/icon2.jpg 192w,
+                img/icon2_120w.jpg 120w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="an icon"></amp-img>
+            <div class="btn_download">Download</div>
+          </a>
+        </div>
+        <div class="banner">
+          <a href="#">
+            <amp-img src="img/mgtest_b3.jpg"
+              srcset="img/mgtest_b3.jpg 1024w,
+                img/mgtest_b3_640w.jpg 800w"
+              width="1024"
+              height="500"
+              layout="responsive"
+              alt="an image"></amp-img>
+            <amp-img class="banner_icon" src="img/icon3.jpg"
+              srcset="img/icon3.jpg 192w,
+                img/icon3_120w.jpg 120w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="an icon"></amp-img>
+            <div class="btn_download">Download</div>
+          </a>
+        </div>
+        <div class="banner">
+          <a href="#">
+            <amp-img src="img/mgtest_b4.jpg"
+              srcset="img/mgtest_b4.jpg 1024w,
+                img/mgtest_b4_640w.jpg 800w"
+              width="1024"
+              height="500"
+              layout="responsive"
+              alt="an image"></amp-img>
+            <amp-img class="banner_icon" src="img/icon4.jpg"
+              srcset="img/icon4.jpg 192w,
+                img/icon4_120w.jpg 120w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="an icon"></amp-img>
+            <div class="btn_download">Download</div>
+          </a>
+        </div>
+        <div class="banner">
+          <a href="#">
+            <amp-img src="img/mgtest_b5.jpg"
+              srcset="img/mgtest_b5.jpg 1024w,
+                img/mgtest_b5_640w.jpg 800w"
+              width="1024"
+              height="500"
+              layout="responsive"
+              alt="an image"></amp-img>
+            <amp-img class="banner_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 192w,
+                img/icon5_120w.jpg 120w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="an icon"></amp-img>
+            <div class="btn_download">Download</div>
+          </a>
+        </div>
+      </amp-carousel>
+
+    
     <div class="app_list">
 
       <div class="app_list_item">
