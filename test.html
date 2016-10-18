@@ -48,18 +48,19 @@
         text-decoration: none;
       }
     </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <div class="header">
       <h1>Test AMP Page</h1>
       <a href="#" class="btn_close" onclick="clicked_close_button()">x</a>
     </div>
-    <amp-img 
-      src="img/mgtest_b5_1024w.jpg" 
-      srcset="img/mgtest_b5_1024w.jpg 1024w,
-              img/mgtest_b5_800w.jpg 800w,
-              img/mgtest_b5_480w.jpg 480w,
-              img/mgtest_b5_320w.jpg 320w"
-      alt="test img" height="500" width="1024" layout="responsive"></amp-img>
+    <amp-img src="img/mgtest_b5_1024w.jpg"
+      srcset="img/mgtest_b5_1024w.jpg 512w, img/mgtest_b5_800w.jpg 400w, img/mgtest_b5_480w.jpg 240w,
+  img/mgtest_b5_320w.jpg 160w"
+      width="1024"
+      height="500"
+      layout="responsive"
+      alt="an image"></amp-img>
   </body>
 </html>
