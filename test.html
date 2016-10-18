@@ -53,10 +53,20 @@
       .banner_icon {
         position: absolute;
         width: 15%;
-        left: 10px;
-        bottom: 10px;
+        left: 15px;
+        bottom: 15px;
         max-width: 120px;
         max-height: 120px;
+      }
+      .btn_download {
+        background:#121212;
+        padding: 8px 15px;
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 8px;
       }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -76,12 +86,13 @@
           alt="an image"></amp-img>
         <div class="banner_icon">
           <amp-img src="img/icon1.jpg"
-            srcset="img/icon1.jpg 192w,img/icon1_120w.jpg 120w,img/icon1_80w.jpg 80w"
+            srcset="img/icon1.jpg 192w,img/icon1_120w.jpg 120w"
             width="120"
             height="120"
             layout="responsive"
             alt="an icon"></amp-img>
         </div>
+        <div class="btn_download">Download</div>
       </a>
     </div>
   </body>
