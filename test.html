@@ -20,10 +20,6 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
       /* General */
-      * {
-        margin: 0;
-        padding: 0;
-      }
       body{
         background: #fff;
         font: 11px/16px "Droid Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -38,22 +34,32 @@
         background-color: #121212;
         color: #fff;
         font-size: 16px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
       }
       .btn_close {
         color: #fff;
-        font: 25px/37px;
         display: block;
         position: fixed;
         top: 0;
-        right: 10px;
+        right: 15px;
+        font: normal 20px/37px "Droid Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="header">
-      <h1>Our Test AMP Page</h1>
+      <h1>Test AMP Page</h1>
       <a href="#" class="btn_close" onclick="clicked_close_button()">x</a>
     </div>
-    <amp-img src="img/mgtest_b5.jpg" alt="test img" height="500" width="1024"></amp-img>
+    <amp-img 
+      src="img/mgtest_b5_1024w.jpg" 
+      srcset="img/mgtest_b5_1024w.jpg 1024w,
+              img/mgtest_b5_800w.jpg 800w,
+              img/mgtest_b5_480w.jpg 480w,
+              img/mgtest_b5_320w.jpg 320w"
+      alt="test img" height="500" width="1024" layout="responsive"></amp-img>
   </body>
 </html>
