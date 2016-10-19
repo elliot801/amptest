@@ -35,8 +35,10 @@
       h2 {
         font-size: 16px;
         font-weight: bold;
-        padding: 10px;
+        padding: 20px 10px 0;
         text-align: center;
+        clear: both;
+        line-height: 20px;
       }
       .btn_close {
         color: #fff;
@@ -129,7 +131,12 @@
             height: 36px;
           }
           .app_list {
-            padding: 20px 10px;
+            padding: 10px;
+          }
+          h2 {
+            padding: 30px 10px 0;
+            font-size: 18px;
+            line-height: 24px;
           }
       }
       @media only screen 
@@ -155,9 +162,14 @@
             padding: 40px 80px;
           }
           .btn_download {
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 26px;
+            line-height: 32px;
             padding: 8px 20px;
+          }
+          h2 {
+            padding: 40px 10px 0;
+            font-size: 20px;
+            line-height: 28px;
           }
       }
     </style>
@@ -168,108 +180,108 @@
       <a href="#" class="btn_close" onclick="clicked_close_button()">x</a>
     </div>
 
-      <amp-carousel id="hero-images"
-          width="1024"
-          height="500"
-          layout="responsive"
-          type="slides"
-          autoplay>
-        <div class="banner">
-          <a href="#">
-            <amp-img src="img/mgtest_b1.jpg"
-              srcset="img/mgtest_b1.jpg 1024w,
-                img/mgtest_b1_640w.jpg 800w"
-              width="1024"
-              height="500"
-              layout="responsive"
-              alt="an image"></amp-img>
-            <amp-img class="banner_icon" src="img/icon1.jpg"
-              srcset="img/icon1.jpg 192w,
-                img/icon1_120w.jpg 120w"
-              width="120"
-              height="120"
-              layout="responsive"
-              alt="an icon"></amp-img>
-            <div class="btn_download">Download</div>
-          </a>
-        </div>
-        <div class="banner">
-          <a href="#">
-            <amp-img src="img/mgtest_b2.jpg"
-              srcset="img/mgtest_b2.jpg 1024w,
-                img/mgtest_b2_640w.jpg 800w"
-              width="1024"
-              height="500"
-              layout="responsive"
-              alt="an image"></amp-img>
-            <amp-img class="banner_icon" src="img/icon2.jpg"
-              srcset="img/icon2.jpg 192w,
-                img/icon2_120w.jpg 120w"
-              width="120"
-              height="120"
-              layout="responsive"
-              alt="an icon"></amp-img>
-            <div class="btn_download">Download</div>
-          </a>
-        </div>
-        <div class="banner">
-          <a href="#">
-            <amp-img src="img/mgtest_b3.jpg"
-              srcset="img/mgtest_b3.jpg 1024w,
-                img/mgtest_b3_640w.jpg 800w"
-              width="1024"
-              height="500"
-              layout="responsive"
-              alt="an image"></amp-img>
-            <amp-img class="banner_icon" src="img/icon3.jpg"
-              srcset="img/icon3.jpg 192w,
-                img/icon3_120w.jpg 120w"
-              width="120"
-              height="120"
-              layout="responsive"
-              alt="an icon"></amp-img>
-            <div class="btn_download">Download</div>
-          </a>
-        </div>
-        <div class="banner">
-          <a href="#">
-            <amp-img src="img/mgtest_b4.jpg"
-              srcset="img/mgtest_b4.jpg 1024w,
-                img/mgtest_b4_640w.jpg 800w"
-              width="1024"
-              height="500"
-              layout="responsive"
-              alt="an image"></amp-img>
-            <amp-img class="banner_icon" src="img/icon4.jpg"
-              srcset="img/icon4.jpg 192w,
-                img/icon4_120w.jpg 120w"
-              width="120"
-              height="120"
-              layout="responsive"
-              alt="an icon"></amp-img>
-            <div class="btn_download">Download</div>
-          </a>
-        </div>
-        <div class="banner">
-          <a href="#">
-            <amp-img src="img/mgtest_b5.jpg"
-              srcset="img/mgtest_b5.jpg 1024w,
-                img/mgtest_b5_640w.jpg 800w"
-              width="1024"
-              height="500"
-              layout="responsive"
-              alt="an image"></amp-img>
-            <amp-img class="banner_icon" src="img/icon5.jpg"
-              srcset="img/icon5.jpg 192w,
-                img/icon5_120w.jpg 120w"
-              width="120"
-              height="120"
-              layout="responsive"
-              alt="an icon"></amp-img>
-            <div class="btn_download">Download</div>
-          </a>
-        </div>
-      </amp-carousel>
+    <amp-carousel id="hero-images"
+        width="1024"
+        height="500"
+        layout="responsive"
+        type="slides"
+        autoplay>
+      <div class="banner">
+        <a href="#">
+          <amp-img src="img/mgtest_b1.jpg"
+            srcset="img/mgtest_b1.jpg 1024w,
+              img/mgtest_b1_640w.jpg 800w"
+            width="1024"
+            height="500"
+            layout="responsive"
+            alt="an image"></amp-img>
+          <amp-img class="banner_icon" src="img/icon1.jpg"
+            srcset="img/icon1.jpg 192w,
+              img/icon1_120w.jpg 120w"
+            width="120"
+            height="120"
+            layout="responsive"
+            alt="an icon"></amp-img>
+          <div class="btn_download">Download</div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <amp-img src="img/mgtest_b2.jpg"
+            srcset="img/mgtest_b2.jpg 1024w,
+              img/mgtest_b2_640w.jpg 800w"
+            width="1024"
+            height="500"
+            layout="responsive"
+            alt="an image"></amp-img>
+          <amp-img class="banner_icon" src="img/icon2.jpg"
+            srcset="img/icon2.jpg 192w,
+              img/icon2_120w.jpg 120w"
+            width="120"
+            height="120"
+            layout="responsive"
+            alt="an icon"></amp-img>
+          <div class="btn_download">Download</div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <amp-img src="img/mgtest_b3.jpg"
+            srcset="img/mgtest_b3.jpg 1024w,
+              img/mgtest_b3_640w.jpg 800w"
+            width="1024"
+            height="500"
+            layout="responsive"
+            alt="an image"></amp-img>
+          <amp-img class="banner_icon" src="img/icon3.jpg"
+            srcset="img/icon3.jpg 192w,
+              img/icon3_120w.jpg 120w"
+            width="120"
+            height="120"
+            layout="responsive"
+            alt="an icon"></amp-img>
+          <div class="btn_download">Download</div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <amp-img src="img/mgtest_b4.jpg"
+            srcset="img/mgtest_b4.jpg 1024w,
+              img/mgtest_b4_640w.jpg 800w"
+            width="1024"
+            height="500"
+            layout="responsive"
+            alt="an image"></amp-img>
+          <amp-img class="banner_icon" src="img/icon4.jpg"
+            srcset="img/icon4.jpg 192w,
+              img/icon4_120w.jpg 120w"
+            width="120"
+            height="120"
+            layout="responsive"
+            alt="an icon"></amp-img>
+          <div class="btn_download">Download</div>
+        </a>
+      </div>
+      <div class="banner">
+        <a href="#">
+          <amp-img src="img/mgtest_b5.jpg"
+            srcset="img/mgtest_b5.jpg 1024w,
+              img/mgtest_b5_640w.jpg 800w"
+            width="1024"
+            height="500"
+            layout="responsive"
+            alt="an image"></amp-img>
+          <amp-img class="banner_icon" src="img/icon5.jpg"
+            srcset="img/icon5.jpg 192w,
+              img/icon5_120w.jpg 120w"
+            width="120"
+            height="120"
+            layout="responsive"
+            alt="an icon"></amp-img>
+          <div class="btn_download">Download</div>
+        </a>
+      </div>
+    </amp-carousel>
 
     <h2>Pellentesque ornare purus</h2>
 
