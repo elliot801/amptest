@@ -1,0 +1,564 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>AMP Test</title>
+    <link rel="canonical" href="test.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      /* General */
+      a,a:link,a:visited,a:hover,a:active {
+        text-decoration: none;
+      }
+      body{
+        background: #fff;
+        font: 11px/16px "Droid Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+        color: #121212;
+      }
+      /* Header */
+      .header{
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+      }
+      h1 {
+        background-color: #121212;
+        color: #fff;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 20px 10px 0;
+        text-align: center;
+        clear: both;
+        line-height: 20px;
+      }
+      .btn_close {
+        color: #fff;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font: normal 20px/37px "Droid Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .banner {
+        position: relative;
+      }
+      .banner_icon {
+        position: absolute;
+        width: 15%;
+        left: 15px;
+        bottom: 15px;
+        max-width: 168px;
+        max-height: 168px;
+        border-radius: 23%;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      }
+      .banner_icon img {
+        border-radius: 23%;
+      }
+      .btn_download {
+        background: #121212;
+        padding: 5px 10px;
+        color: white;
+        font-size: 12px;
+        line-height: 16px;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      }
+      .app_list {
+        padding: 20px;
+        max-width: 1024px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .app_list_item {
+        width: 25%;
+        padding: 4% 4% 2%;
+        float: left;
+        position: relative;
+      }
+      .app_list_icon {
+        border-radius: 23%;
+      }
+      .app_list_icon_free {
+        position: absolute;
+        width: 85%;
+        z-index: 999;
+        max-width: 168px;
+      }
+      .app_list_name {
+        margin: 5px auto 0;
+        color: #121212;
+        display: block;
+        padding: 2px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 14px;
+        height: 28px;
+        overflow: hidden;
+        max-width: 240px;
+      }
+      .app_list_icon_container {
+        max-width: 168px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      @media only screen 
+        and (max-device-width : 480px) 
+        and (-webkit-min-device-pixel-ratio: 1)  { 
+          .app_list {
+            padding: 10px 5px;
+          }
+      }
+      @media only screen 
+        and (min-device-width : 480px) 
+        and (-webkit-min-device-pixel-ratio: 1)  { 
+          .app_list_name {
+            font-size: 14px;
+            line-height: 18px;
+            height: 36px;
+          }
+          .app_list {
+            padding: 10px;
+          }
+          h2 {
+            padding: 30px 10px 0;
+            font-size: 18px;
+            line-height: 24px;
+          }
+      }
+      @media only screen 
+        and (min-device-width : 768px) 
+        and (-webkit-min-device-pixel-ratio: 1)  { 
+          .btn_close {
+            font-size: 24px;
+            line-height: 48px;
+          }
+          .header{
+            height: 50px;
+            line-height: 50px;
+          }
+          h1{
+            font-size: 20px;
+          }
+          .app_list_name {
+            font-size: 16px;
+            line-height: 22px;
+            height: 44px;
+          }
+          .app_list_item {
+            width: 19%;
+            padding: 1% 3%;
+          }
+          .app_list {
+            padding: 40px 80px;
+          }
+          .btn_download {
+            font-size: 26px;
+            line-height: 32px;
+            padding: 8px 20px;
+          }
+          h2 {
+            padding: 40px 10px 0;
+            font-size: 20px;
+            line-height: 28px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Test AMP Page</h1>
+      <a href="#" class="btn_close" onclick="clicked_close_button()">x</a>
+    </div>
+
+    <div class="banner">
+      <a href="#">
+        <amp-img src="img/mgtest_b1.jpg"
+          srcset="img/mgtest_b1.jpg 1024w,
+            img/mgtest_b1_640w.jpg 800w"
+          width="1024"
+          height="500"
+          layout="responsive"
+          alt="an image"></amp-img>
+        <amp-img class="banner_icon" src="img/icon1.jpg"
+          srcset="img/icon1.jpg 192w,
+            img/icon1_120w.jpg 120w"
+          width="120"
+          height="120"
+          layout="responsive"
+          alt="an icon"></amp-img>
+        <div class="btn_download">Download</div>
+      </a>
+    </div>
+
+    <h2>Pellentesque ornare purus</h2>
+
+    <div class="app_list">
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon1.jpg"
+              srcset="img/icon1.jpg 300w,
+                img/icon1_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Fusce sagittis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon2.jpg"
+              srcset="img/icon2.jpg 300w,
+                img/icon2_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Aenean lacinia quam</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon3.jpg"
+              srcset="img/icon3.jpg 300w,
+                img/icon3_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Lorem ipsum dolor sit amet</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon4.jpg"
+              srcset="img/icon4.jpg 300w,
+                img/icon4_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">In nec ultrices lacus</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 300w,
+                img/icon5_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Duis venenatis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon1.jpg"
+              srcset="img/icon1.jpg 300w,
+                img/icon1_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Fusce sagittis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon2.jpg"
+              srcset="img/icon2.jpg 300w,
+                img/icon2_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Aenean lacinia quam</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon3.jpg"
+              srcset="img/icon3.jpg 300w,
+                img/icon3_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Lorem ipsum dolor sit amet</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon4.jpg"
+              srcset="img/icon4.jpg 300w,
+                img/icon4_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">In nec ultrices lacus</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 300w,
+                img/icon5_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Duis venenatis</span>
+        </a>
+      </div>
+
+    </div>
+
+    <h2>Nam mattis lacus</h2>
+
+    <div class="app_list">
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon1.jpg"
+              srcset="img/icon1.jpg 300w,
+                img/icon1_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Fusce sagittis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 300w,
+                img/icon5_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Duis venenatis</span>
+        </a>
+      </div>
+
+    </div>
+
+    <h2>Maecenas lacinia</h2>
+
+    <div class="app_list">
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon1.jpg"
+              srcset="img/icon1.jpg 300w,
+                img/icon1_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Fusce sagittis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 300w,
+                img/icon5_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Duis venenatis</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon3.jpg"
+              srcset="img/icon3.jpg 300w,
+                img/icon3_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Lorem ipsum dolor sit amet</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon4.jpg"
+              srcset="img/icon4.jpg 300w,
+                img/icon4_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">In nec ultrices lacus</span>
+        </a>
+      </div>
+
+      <div class="app_list_item">
+        <div class="app_list_icon_container">
+          <a href="#">
+            <amp-img class="app_list_icon_free" src="img/icon_free.png"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+            <amp-img class="app_list_icon" src="img/icon5.jpg"
+              srcset="img/icon5.jpg 300w,
+                img/icon5_120w.jpg 200w"
+              width="120"
+              height="120"
+              layout="responsive"
+              alt="test"></amp-img>
+          </div>
+          <span class="app_list_name">Duis venenatis</span>
+        </a>
+      </div>
+
+    </div>
+  </body>
+</html>
