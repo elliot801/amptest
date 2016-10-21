@@ -63,7 +63,7 @@
         box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
       }
       .banner_icon img {
-        border-radius: 18%;
+        border-radius: 23%;
       }
       .btn_download {
         background: #121212;
@@ -142,6 +142,10 @@
       @media only screen 
         and (min-device-width : 768px) 
         and (-webkit-min-device-pixel-ratio: 1)  { 
+          .btn_close {
+            font-size: 24px;
+            line-height: 48px;
+          }
           .header{
             height: 50px;
             line-height: 50px;
@@ -185,7 +189,8 @@
         height="500"
         layout="responsive"
         type="slides"
-        autoplay>
+        autoplay
+        delay="3500">
       <div class="banner">
         <a href="#">
           <amp-img src="img/mgtest_b1.jpg"
